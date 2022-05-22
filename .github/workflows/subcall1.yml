@@ -1,4 +1,6 @@
 name: "subcall1"
+on: 
+  workflow_dispatch
 env:
   DAY_OF_WEEK: Monday
 
