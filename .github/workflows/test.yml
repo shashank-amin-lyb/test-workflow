@@ -1,4 +1,4 @@
-name: "Main Call"
+name: "Main Call Test"
 on:
   push:
     branches:
