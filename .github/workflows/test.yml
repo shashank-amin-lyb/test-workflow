@@ -7,5 +7,6 @@ jobs:
   call1:
     uses: lyb-rozgaar/test-workflow/.github/workflows/subcall1.yml@main
   call2:
+    needs: call1
     uses: lyb-rozgaar/test-workflow/.github/workflows/subcall2.yml@main
     
