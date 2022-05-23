@@ -1,12 +1,12 @@
 name: "Main Call Test"
 on:
   workflow_dispatch
-#   push:
-#     branches:
-#     - master
+
 jobs:
   call1:
     uses: lyb-rozgaar/test-workflow/.github/workflows/subcall1.yml@main
+    secrets:
+      token: ${{secrets.TOKEN}}
   call2:
     needs: call1
     uses: lyb-rozgaar/test-workflow/.github/workflows/subcall2.yml@main
