@@ -2,7 +2,7 @@ name: "subcall1"
 on: 
   workflow_call:
     secrets:
-      token:
+      TOKEN:
         required: true
 env:
   DAY_OF_WEEK: Monday
