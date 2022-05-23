@@ -6,7 +6,7 @@ jobs:
   call1:
     uses: lyb-rozgaar/test-workflow/.github/workflows/subcall1.yml@main
     secrets:
-      token: ${{secrets.TOKEN}}
+      token1: ${{secrets.TOKEN}}
   call2:
     needs: call1
     uses: lyb-rozgaar/test-workflow/.github/workflows/subcall2.yml@main
