@@ -1,10 +1,9 @@
 name: "subcall1"
 on: 
   workflow_call:
-    inputs:
+    secrets:
       token1:
         required: true
-        type: string 
 env:
   DAY_OF_WEEK: Monday
 
@@ -16,7 +15,7 @@ jobs:
     steps:
       - name: "Say Hello Arya it's Monday"
         run: |
-          if (${{ inputs.token1 }} -eq "T3stT0k3nV4lu3"){
+          if ("${{ secrets.token1 }}" -eq "T3stT0k3nV4lu3"){
             echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
           }          
         shell: pwsh
